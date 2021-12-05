@@ -11,8 +11,6 @@ k3s_server:
   # Disable Docker - this will use the default containerd CRI
   docker: false
   disable:
-    # Disable traefik - installed with Flux
-    - traefik
     # Disable metrics-server - installed with Flux
     - metrics-server
   disable-network-policy: true
