@@ -29,11 +29,11 @@ main() {
 
     if [[ "${verify}" == 1 ]]; then
         verify_ansible_hosts
-        verify_metallb
-        verify_kubevip
+    #    verify_metallb
+    #    verify_kubevip
         verify_age
         verify_git_repository
-        verify_cloudflare
+    #    verify_cloudflare
         success
     else
         # sops configuration file
