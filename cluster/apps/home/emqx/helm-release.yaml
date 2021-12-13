@@ -44,7 +44,7 @@ spec:
     persistence:
       enabled: true
       size: 100Mi
-      storageClass: "ceph-block"
+      storageClass: "local-path"
       accessMode: ReadWriteOnce
     affinity:
       podAntiAffinity:
