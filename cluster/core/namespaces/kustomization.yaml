@@ -4,3 +4,4 @@ resources:
   - cert-manager.yaml
   - networking.yaml
   - home.yaml
+  - longhorn-system.yaml
