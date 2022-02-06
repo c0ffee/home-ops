@@ -7,3 +7,10 @@ tasks:
     cmds:
       - flux reconcile source git flux-system
     silent: true
+  status:
+    desc: Get all
+    cmds:
+      - flux --kubeconfig=./provision/kubeconfig get all
+
+
+     
