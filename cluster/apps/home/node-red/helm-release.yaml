@@ -47,6 +47,12 @@ spec:
         tls:
           - hosts:
               - "node-red.${SECRET_DOMAIN}"
+    securityContext:
+      fsGroup: 568
+      fsGroupChangePolicy: OnRootMismatch
+      runAsGroup: 568
+      runAsNonRoot: true
+      runAsUser: 568
     persistence:
       config:
         enabled: true
