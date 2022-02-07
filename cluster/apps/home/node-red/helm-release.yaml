@@ -47,7 +47,7 @@ spec:
         tls:
           - hosts:
               - "node-red.${SECRET_DOMAIN}"
-    securityContext:
+    podSecurityContext:
       fsGroup: 568
       fsGroupChangePolicy: OnRootMismatch
       runAsGroup: 568
