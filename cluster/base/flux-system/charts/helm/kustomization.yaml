@@ -10,6 +10,7 @@ resources:
   - grafana-charts.yaml
   - hajimari-charts.yaml
   - infracloudio-charts.yaml
+  - influxdata-charts.yaml
   - jetstack-charts.yaml
   - k8s-at-home-charts.yaml
   - metrics-server-charts.yaml
