@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       # renovate: registryUrl=https://helm.influxdata.com
-      chart: 
+      chart: influxdb2
       version: 2.0.9
       sourceRef:
         kind: HelmRepository
