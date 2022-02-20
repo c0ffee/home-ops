@@ -23,6 +23,8 @@ spec:
             urls:
               - "http://influxdb-influxdb2:80"
             database: "sensors"
+            skip_database_creation: false
+            user_agent: "telegraf"
             username: "influx"
             password: "${SECRET_INFLUX_PASSWORD}"
       imputs:
