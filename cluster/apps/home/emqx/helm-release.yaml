@@ -25,7 +25,7 @@ spec:
     service:
       type: LoadBalancer
     emqxConfig:
-      EMQX_ALLOW_ANONYMOUS: "false"
+      EMQX_ALLOW_ANONYMOUS: "true"
       EMQX_ADMIN_PASSWORD: "${SECRET_EMQX_ADMIN_PASSWORD}"
       EMQX_AUTH__MNESIA__PASSWORD_HASH: plain
       EMQX_AUTH__USER__1__USERNAME: "${SECRET_MQTT_USERNAME}"
