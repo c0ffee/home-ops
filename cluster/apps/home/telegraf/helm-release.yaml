@@ -23,7 +23,7 @@ spec:
             urls:
               - "http://influxdb-influxdb2:80"
             database: "sensors"
-            user: "influx"
+            username: "influx"
             password: "${SECRET_INFLUX_PASSWORD}"
       imputs:
         - mqtt_consumer:
