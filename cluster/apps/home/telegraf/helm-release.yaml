@@ -16,3 +16,22 @@ spec:
         name: influxdata-charts
         namespace: flux-system
       interval: 5m
+  values:
+    config:
+      outputs:
+        - influxdb:
+            urls:
+              - "http://influxdb-influxdb2:80"
+            database: "sensors"
+            user: "influx"
+            password: "${SECRET_INFLUX_PASSWORD}"
+      imputs:
+        - mqtt_consumer:
+            servers: "emqx:1883"
+            data_format: json 
+            topics:
+              - "zigbee2mqtt/+"
+              - "tele/+/SENSOR"
+            client_id: "telegraf-zigbee2mqtt"
+            username: "${SECRET_MQTT_USERNAME}"
+            password: "${SECRET_MQTT_PASSWORD}" 
