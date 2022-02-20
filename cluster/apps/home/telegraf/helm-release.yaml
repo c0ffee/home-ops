@@ -17,8 +17,6 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    env:
-      INFLUX_TOKEN: "${SECRET_INFLUX_TOKEN}"
     config:
       outputs:
         - influxdb_v2:
