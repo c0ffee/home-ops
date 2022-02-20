@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       # renovate: registryUrl=https://helm.influxdata.com
-      chart: telegraf 
+      chart: telegraf
       version: 1.8.14
       sourceRef:
         kind: HelmRepository
@@ -29,10 +29,10 @@ spec:
       inputs:
         - mqtt_consumer:
             servers: "emqx:1883"
-            data_format: json 
+            data_format: json
             topics:
               - "zigbee2mqtt/+"
               - "tele/+/SENSOR"
             client_id: "telegraf-zigbee2mqtt"
             username: "${SECRET_MQTT_USERNAME}"
-            password: "${SECRET_MQTT_PASSWORD}" 
+            password: "${SECRET_MQTT_PASSWORD}"

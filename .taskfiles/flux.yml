@@ -11,6 +11,3 @@ tasks:
     desc: Get all
     cmds:
       - flux --kubeconfig=./provision/kubeconfig get all
-
-
-     
