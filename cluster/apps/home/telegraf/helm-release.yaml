@@ -21,15 +21,14 @@ spec:
       INFLUX_TOKEN: "${SECRET_INFLUX_TOKEN}"
     config:
       outputs:
-        - influxdb:
+        - influxdb_v2:
             urls:
               - "http://influxdb-influxdb2:80"
-            database: "sensors"
-            skip_database_creation: false
+            token: "${SECRET_INFLUX_TOKEN}"
+            organization: "schunet"
+            bucket: "sensors/autogen"
             user_agent: "telegraf"
-            #username: "influx"
-            #password: "${SECRET_INFLUX_PASSWORD}"
-      imputs:
+      inputs:
         - mqtt_consumer:
             servers: "emqx:1883"
             data_format: json 
