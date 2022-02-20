@@ -17,6 +17,8 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    env:
+      INFLUX_TOKEN: "${SECRET_INFLUX_TOKEN}"
     config:
       outputs:
         - influxdb:
@@ -25,8 +27,8 @@ spec:
             database: "sensors"
             skip_database_creation: false
             user_agent: "telegraf"
-            username: "influx"
-            password: "${SECRET_INFLUX_PASSWORD}"
+            #username: "influx"
+            #password: "${SECRET_INFLUX_PASSWORD}"
       imputs:
         - mqtt_consumer:
             servers: "emqx:1883"
