@@ -10,4 +10,4 @@ tasks:
   status:
     desc: Get all
     cmds:
-      - flux --kubeconfig=./provision/kubeconfig get all
+      - flux --kubeconfig=./provision/kubeconfig get all -A
