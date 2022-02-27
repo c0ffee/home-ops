@@ -22,3 +22,24 @@ spec:
       existingClaim: grafana-config-v1
     adminUser: admin
     adminPassword: "${SECRET_GRAFANA_PASSWORD}"
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+          - name: influxdb
+            type: influxdb
+            access: proxy
+            isDefault: true
+            url: http://influxdb-influxdb2:80
+            database: sensors/autogen
+            jsonData:
+              httpMode: GET
+              httpHeaderName1: 'Authorization'
+            secureJsonData:
+              httpHeaderValue1: 'Token "${SECRET_INFLUX_TOKEN}"'
+            #jsonData:
+            #  version: Flux
+            #  organization: schunet
+            #  defaultBucket: bucket
+            #secureJsonData:
+            #  token: token
