@@ -40,7 +40,7 @@ spec:
               httpMode: GET
               httpHeaderName1: 'Authorization'
             secureJsonData:
-              httpHeaderValue1: 'Token ${SECRET_INFLUX_GRAFANA_TOKEN}'
+              httpHeaderValue1: "'Token ${SECRET_INFLUX_GRAFANA_TOKEN}'"
             #jsonData:
             #  version: Flux
             #  organization: schunet
