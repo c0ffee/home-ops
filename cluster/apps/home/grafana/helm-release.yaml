@@ -24,4 +24,4 @@ spec:
       ## Name of existing PVC to be used in the influx deployment
       name: grafana-config-v1
     adminUser: admin
-    adminPassword: "${SECRET_GRAFANA_PASSWORD}
+    adminPassword: "${SECRET_GRAFANA_PASSWORD}"
