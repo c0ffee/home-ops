@@ -7,3 +7,4 @@ resources:
   - zigbee2mqtt
   - influxdb
   - telegraf
+  - grafana
