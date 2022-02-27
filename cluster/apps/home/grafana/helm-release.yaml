@@ -31,7 +31,7 @@ spec:
             access: proxy
             isDefault: true
             url: http://influxdb-influxdb2:80
-            database: sensors/autogen
+            database: sensors
             jsonData:
               httpMode: GET
               httpHeaderName1: 'Authorization'
