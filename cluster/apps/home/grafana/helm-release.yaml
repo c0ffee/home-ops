@@ -19,9 +19,6 @@ spec:
   values:
     persistence:
       enabled: true
-      ## If true will use an existing PVC instead of creating one
-      useExisting: true
-      ## Name of existing PVC to be used in the influx deployment
-      name: grafana-config-v1
+      existingClaim: grafana-config-v1
     adminUser: admin
     adminPassword: "${SECRET_GRAFANA_PASSWORD}"
