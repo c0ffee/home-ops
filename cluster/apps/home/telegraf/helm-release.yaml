@@ -30,7 +30,7 @@ spec:
             user_agent: "telegraf"
       inputs:
         - mqtt_consumer:
-            servers: ["tcp://emqx:1883"]
+            servers: ["tcp://mosquitto:1883"]
             data_format: json
             topics:
               - "zigbee2mqtt/+"
