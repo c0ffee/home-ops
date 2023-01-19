@@ -1,0 +1,26 @@
+apiVersion: upgrade.cattle.io/v1
+kind: Plan
+metadata:
+  name: os-upgrade
+  namespace: system-upgrade
+  labels:
+    k3s-upgrade: server
+spec:
+  concurrency: 1
+  # This is the version (tag) of the image.
+  # The version is refered to the kairos version plus the k3s version.
+  version: "v1.4.0-k3sv1.25.5-k3s1"
+  nodeSelector:
+    matchExpressions:
+      - {key: kubernetes.io/hostname, operator: Exists}
+  serviceAccountName: system-upgrade
+  cordon: false
+  drain:
+    force: false
+    disableEviction: true
+  upgrade:
+    # Here goes the image which is tied to the flavor being used.
+    # Currently can pick between opensuse and alpine
+    image: quay.io/kairos/kairos-opensuse-arm-rpi
+    command:
+    - "/usr/sbin/suc-upgrade"
