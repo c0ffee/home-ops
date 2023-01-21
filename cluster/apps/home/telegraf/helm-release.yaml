@@ -18,7 +18,7 @@ spec:
       interval: 5m
   values:
     image:
-      tag: v1.25.0
+      tag: 1.25.0
     service:
       enabled: false
     config:
