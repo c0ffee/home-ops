@@ -19,5 +19,7 @@ spec:
   values:
     defaultSettings:
       defaultReplicaCount: 1
+      backupTarget: nfs://nas:/volume1/cluster
+      backupTargetCredentialSecret: nfs-backup
     persistence:
       defaultClassReplicaCount: 1
