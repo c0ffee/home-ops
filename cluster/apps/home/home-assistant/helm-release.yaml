@@ -48,7 +48,7 @@ spec:
           sonos:
             enabled: true
             port: 1400
-            protocol: tcp
+            protocol: TCP
     probes:
       liveness:
         enabled: false
