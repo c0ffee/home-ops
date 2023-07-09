@@ -12,7 +12,7 @@ spec:
   version: "v2.2.2-k3sv1.25.10-k3s1"
   nodeSelector:
     matchExpressions:
-      - {key: kubernetes.io/hostname, operator: Exists}
+      - { key: kubernetes.io/hostname, operator: Exists }
   serviceAccountName: system-upgrade
   cordon: false
   drain:
@@ -23,4 +23,4 @@ spec:
     # Currently can pick between opensuse and alpine
     image: quay.io/kairos/kairos-opensuse-tumbleweed
     command:
-    - "/usr/sbin/suc-upgrade"
+      - "/usr/sbin/suc-upgrade"
